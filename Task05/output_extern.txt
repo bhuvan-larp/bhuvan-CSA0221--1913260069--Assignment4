@@ -1,0 +1,2 @@
+extern: 1001 1002 1003
+after accidental counter = 5 in main: next token = 6 (duplicate-prone)

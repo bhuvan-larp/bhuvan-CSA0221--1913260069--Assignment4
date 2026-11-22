@@ -1,0 +1,8 @@
+(a) auto   : 1001 1001 1001
+(b) static : 1001 1002 1003 
+(d) register loop variable printing tokens: 1004 1005 1006 
+    (&i would be a compile error: address of register variable requested)
+
+--- 5.2 two counters ---
+auto   veg: 1001 1001  nonveg: 2001 2001  (resets every call)
+static veg: 1001 1002  nonveg: 2001 2002  (independent)

@@ -1,0 +1,3 @@
+/tmp/reg.c: In function 'main':
+/tmp/reg.c:1:1: error: address of register variable 'r' requested
+    1 | int main(void){ register int r = 1; int *p = &r; return *p; }
