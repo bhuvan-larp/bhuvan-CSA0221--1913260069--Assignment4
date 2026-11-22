@@ -1,0 +1,13 @@
+Sorted by age:
+  Ravi   23  9444098765  BP 110/70  visit 06/11/2026
+  Meena  45  9840012345  BP 120/80  visit 05/11/2026
+  Kumar  67  9941011223  BP 145/95  visit 06/11/2026
+Limit test: tried to add 105 more, accepted 97, count = 100
+
+--- sizeof measurements ---
+sizeof(struct date)=12 sizeof(struct bp)=8 sizeof(struct patient)=56
+Raw field bytes per patient = 55 (name20+age4+phone11+bp8+date12)
+Padding in struct patient   = 1 bytes
+Parallel arrays (char date[9], float bp) bytes per patient = 48
+Sort n=3000 by age: AoS bytes moved/side = 165480, time 4.6 ms
+Sort n=3000 by age: SoA bytes moved/side = 141840, time 3.4 ms (5 separate copies per swap)
