@@ -1,0 +1,16 @@
+sizeof(struct packet_struct) = 20
+sizeof(union only)           = 8
+sizeof(struct packet_union)  = 12
+sizeof(struct packet_ptr)    = 16 (+ malloc payload 4..8 and malloc header, usually 16-24)
+offsetof(packet_union, v)    = 4 (4-byte tag, union needs only 4-byte alignment, so no padding)
+Memory for 10000 packets: struct=200000 B, union=120000 B, saving=80000 B
+Temp 31.5 C
+Humidity 68 %
+Status RAINING
+Status 
+
+--- Task 3.4 misuse: store temperature, read humidity ---
+celsius = 31.5, percent (wrong member) = 1107034112 (hex 0x41fc0000)
+
+--- Alternative: void* payload ---
+humidity via void*: 68 (needs cast, extra pointer hop, free() needed)
