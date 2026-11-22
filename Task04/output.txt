@@ -1,0 +1,23 @@
+account 101: &list[0] = 0x7ffe6ddc85d0
+  inside addInterest : a = 0x7ffe6ddc85d0 (same as &list[i])
+account 102: &list[1] = 0x7ffe6ddc85d8
+  inside addInterest : a = 0x7ffe6ddc85d8 (same as &list[i])
+account 103: &list[2] = 0x7ffe6ddc85e0
+  inside addInterest : a = 0x7ffe6ddc85e0 (same as &list[i])
+101 5200.00
+102 12480.00
+103 832.00
+
+--- alternative: pass by value and return the copy ---
+101 5200.00
+102 12480.00
+103 832.00
+
+--- boundary: zero balance, zero rate ---
+  inside addInterest : a = 0x7ffe6ddc85b0 (same as &list[i])
+104 0.00
+  inside addInterest : a = 0x7ffe6ddc85b8 (same as &list[i])
+105 1000.00
+
+sizeof(struct account) = 8 bytes; pointer = 8 bytes
+200000000 calls: pointer 0.42 s, value+return 1.49 s (-O0, machine dependent; t=1.0 u=1.0)

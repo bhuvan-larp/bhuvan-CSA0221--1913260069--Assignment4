@@ -1,0 +1,12 @@
+task4_buggy.c: In function 'main':
+task4_buggy.c:13:24: error: 'p' is a pointer; did you mean to use '->'?
+   13 |     printf("%d %f\n", p.number, p.balance);
+      |                        ^
+      |                        ->
+task4_buggy.c:13:34: error: 'p' is a pointer; did you mean to use '->'?
+   13 |     printf("%d %f\n", p.number, p.balance);
+      |                                  ^
+      |                                  ->
+task4_buggy.c:11:21: warning: variable 'p' set but not used [-Wunused-but-set-variable]
+   11 |     struct account *p = list;
+      |                     ^

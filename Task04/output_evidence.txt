@@ -1,0 +1,10 @@
+account 101: &list[0] = 0x7ffd01f4b7b0, balance before = 5000.00
+  inside addInterest : &a = 0x7ffd01f4b788, a.balance = 5200.00
+  back in main       : balance after  = 5000.00  (unchanged)
+account 102: &list[1] = 0x7ffd01f4b7b8, balance before = 12000.00
+  inside addInterest : &a = 0x7ffd01f4b788, a.balance = 12480.00
+  back in main       : balance after  = 12000.00  (unchanged)
+account 103: &list[2] = 0x7ffd01f4b7c0, balance before = 800.00
+  inside addInterest : &a = 0x7ffd01f4b788, a.balance = 832.00
+  back in main       : balance after  = 800.00  (unchanged)
+101 5000.000000
