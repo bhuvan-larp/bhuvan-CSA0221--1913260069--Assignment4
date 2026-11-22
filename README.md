@@ -3,8 +3,8 @@
 
 | | |
 |---|---|
-| Name | **<YOUR NAME HERE>** |
-| Register number | **<YOUR REGISTER NUMBER HERE>** |
+| Name | **<bhuvan>** |
+| Register number | **<1913260069>** |
 | Compiler | gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0, standard C |
 | Compile command | `gcc -Wall -Wextra -o <name> <file>.c` (no warnings) |
 | GitHub repo | `CSA02-<RegisterNumber>-Assignment4` |
