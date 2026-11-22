@@ -1,0 +1,21 @@
+Sorted by weight:
+  504  0.5 kg
+  502  1.2 kg
+  503  2.8 kg
+  501  4.5 kg
+  505  7.0 kg
+Parcels for Chennai:
+  parcel 504  0.5 kg  to Hari, Chennai-600042
+  parcel 502  1.2 kg  to Dev, Chennai-600020
+  parcel 501  4.5 kg  to Bala, Chennai-600077
+  (3 found)
+Parcels for Ooty:
+  (0 found)  <- special case: none
+
+Access paths for 3rd parcel (index 2):
+  (i)  day[2].receiver.pincode  = 641001
+  (ii) (p+2)->receiver.pincode  = 641001
+
+sizeof(Date)=12 sizeof(Person)=44 sizeof(Parcel nested)=116 sizeof(FlatParcel)=116
+Bytes copied per swap in sort = sizeof(Parcel) = 116
+Flat path would be: flat[2].r_pin ; nested path: day[2].receiver.pincode
