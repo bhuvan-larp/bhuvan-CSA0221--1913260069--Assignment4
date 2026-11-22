@@ -1,0 +1,5 @@
+n = 20000 items (hits=400)
+add at front : list 0.49 ms (O(1) each)   array 131.37 ms (O(n) shift each)
+find 200 ids : list 9.13 ms (O(n))        array 5.30 ms (O(n))
+remove 200   : list 7.50 ms               array 5.21 ms (find + shift)
+sizeof(struct node) = 48, sizeof(struct arr_item) = 36 -> next pointer + padding = 12 extra bytes per item

@@ -1,0 +1,32 @@
+== Normal sales ==
+  Bill #1: 5 x Samosa @ 12.00 = 60.00
+  Bill #2: 10 x Tea @ 8.00 = 80.00
+  Bill #3: 2 x Chips @ 20.00 = 40.00
+  Bill #4: 2 x Snack combo @ 28.00 = 56.00
+== Expiring item sale ==
+  Bill #5: 3 x Biscuits @ 10.00 = 30.00
+== Insufficient stock ==
+  REFUSED: Tea requested 60, only 38 in stock (stock unchanged)
+== Special cases ==
+  REFUSED: Curd cup expired 1 day(s) ago
+  REFUSED: Chips quantity 0 is not valid
+  REFUSED: item 99 does not exist
+  Bill #6: 13 x Chips @ 20.00 = 260.00
+  REFUSED: Chips requested 1, only 0 in stock (stock unchanged)
+
+Expiry check (today 12/10/2026, warn within 2 days):
+  WARNING : Biscuits   expires in 1 day(s), stock 15
+  EXPIRED : Curd cup   expired 1 day(s) ago, stock 10
+
+Stock left: Biscuits 15, Samosa 23, Tea 38, Chips 0
+
+Day summary (sorted by revenue, highest first):
+  Chips        Rs  300.00
+  Tea          Rs   80.00
+  Samosa       Rs   60.00
+  Snack combo  Rs   56.00
+  Biscuits     Rs   30.00
+  Curd cup     Rs    0.00
+  TOTAL        Rs  526.00
+
+sizeof(struct item) = 60, sizeof(union) = 16, array of 20 = 1200 bytes
